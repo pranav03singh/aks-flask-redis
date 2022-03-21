@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: flaskapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+      - name: flaskapp
+        image: testacrr221.azurecr.io/flask-app:v2
+        ports:
+        - name: http
+          containerPort: 5000
+        env:
+        - name: "REDIS_HOST"
+          value: "redis"
+          name: "REDIS_PORT"
+          value: "6379"
+      imagePullSecrets:
+        - name: acr-login
