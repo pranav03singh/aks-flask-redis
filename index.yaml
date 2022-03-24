@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  flaskapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-03-24T06:43:31.702135814Z"
+    description: Flask App with Redis DB
+    digest: 4c320eefdf393369b4d6eea1064a6a4af8a7df169f87f84c03b2fe0a5b077f59
+    keywords:
+    - flask
+    - redis
+    name: flaskapp
+    urls:
+    - https://github.com/pranav03singh/aks-flask-redis.git/flaskapp-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-03-24T06:43:31.701434152Z"
