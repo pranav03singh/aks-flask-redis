@@ -48,7 +48,10 @@ on:
   push:
     branches:
     - test1
+    - main
   pull_request:
+    branches:
+    - main
 
 jobs:
   terraform:
